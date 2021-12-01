@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image" href="src/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Journey to Space</title>
+    <link rel="stylesheet" href="style/style.css">
+  </head>
+  <body>
+    <div id="warning">
+      <img src="src/icons/rotate-device.gif" alt="">
+      <p>For a better experience, please hold your device in landscape mode</p>
+    </div>
+    <div id="loading" class='visible'>
+    <div id="app"></div>
+      <div class='loading-animation'>
+        <img src="src/icons/mars.svg" alt="">
+        <div class='rocket-container'>
+            <img src="src/icons/rocket.png" alt="">
+        </div>
+      </div>
+    </div>
+    <canvas id='canvas'></canvas>
+    <section id='home' >
+      <h1>You won a free ticket to</h1>
+      <h2>space</h2>
+      <button data-value='start' id='start'>Start the tour</button>
+    </section>
+    <div id='tour'>
+      <nav class='top-nav'>
+        <button id="backHome"> 
+          <img src="src/icons/rocket.png" alt="home">
+          <span>Fly back home</span>
+        </button>
+        <button id="openAbout"> 
+          <img src="src/icons/about.png" alt="about">
+          <span>About</span>
+        </button>
+        <button id='contrast'>
+          <img src="src/icons/contrastoff.png" alt="toggle contrast">
+          <span>Contrast off</span>
+        </button>
+        <button id='music'>
+          <img src="src/icons/soundon.png" alt="sound control">
+          <span>Music on</span>
+        </button>
+      </nav>
+      <section class='planets'>
+        <article id='neptune'>
+          <div class='container'>
+            <h2>Neptune</h2>
+            <p>Neptune is the only planet of our system that is invisible to the unaid eye. Thus, it was also the first planet to be discovered by mathematical predictions. Neptune is referred to as an ice giant, and holds the most powerful wind speeds of the Solar System.</p>
+            <div>
+              <h3>Date of discovery:</h3>
+              <span>Sept 23rd 1846</span>
+            </div>
+            <div>
+              <h3>Distance from the sun:</h3>
+              <span>4.5 billion km</span>
+            </div>
+            <div>
+              <h3>Mass:</h3>
+              <span>17 earth</span>
+            </div>
+            <div>
+              <h3>Radius:</h3>
+              <span>24,764 km</span>
+            </div>
+            <div>
+              <h3>Orbital period:</h3>
+              <span>165 years</span>
+            </div>
+            <div>
+              <h3>Rotation period:</h3>
+              <span>16 hours</span>
+            </div>
+            <div>
+              <h3>Surface temperature:</h3>
+              <span>-201°C</span>
+            </div>
+            <div>
+              <h3>Number of moons:</h3>
+              <span>14, including Triton</span>
+            </div>
+            <div>
+              <h3>Number of rings:</h3>
+              <span>5</span>
+            </div>
+          </div>
+        </article>
+        <article id='uranus'>
+          <div class='container'>
+            <h2>Uranus</h2>
+            <p>Uranus is named after the Greek god of the sky. It has only been visited once, in 1986, by space probe Voyager 2. Its  blue color is due to the presence of gaseous methane, which absorbs red light, in its external layer.</p>
+            <div>
+              <h3>Date of discovery:</h3>
+              <span>March 13th 1781</span>
+            </div>
+            <div>
+              <h3>Distance from the sun:</h3>
+              <span>2.9 billion km</span>
+            </div>
+            <div>
+              <h3>Mass:</h3>
+              <span>14.5 earth</span>
+            </div>
+            <div>
+              <h3>Radius:</h3>
+              <span>25,362 km</span>
+            </div>
+            <div>
+              <h3>Orbital period:</h3>
+              <span>84 years</span>
+            </div>
+            <div>
+              <h3>Rotation period:</h3>
+              <span>17 hours</span>
+            </div>
+            <div>
+              <h3>Surface temperature:</h3>
+              <span>-197°C</span>
+            </div>
+            <div>
+              <h3>Number of moons:</h3>
+              <span>26, including Oberon and Titania</span>
+            </div>
+            <div>
+              <h3>Number of rings:</h3>
+              <span>13</span>
+            </div>
+          </div>
+        </article>
+        <article id='saturn'>
+         <div class='container'>
+            <h2>Saturn</h2>
+            <p>Although Saturn is not the only planet to have rings, it has the most complex ring system of the Solar System, making it widely known as "The Ring Planet". It is also, for now, the planet with the most numerous satellites.</p>
+            <div>
+              <h3>First telescope observation:</h3>
+              <span>1610, by Galileo</span>
+            </div>
+            <div>
+              <h3>Distance from the sun:</h3>
+              <span>1.4 billion km</span>
+            </div>
+            <div>
+              <h3>Mass:</h3>
+              <span>95 earth</span>
+            </div>
+            <div>
+              <h3>Radius:</h3>
+              <span>58,232 km</span>
+            </div>
+            <div>
+              <h3>Orbital period:</h3>
+              <span>19.5 years</span>
+            </div>
+            <div>
+              <h3>Rotation period:</h3>
+              <span>10.6 hours</span>
+            </div>
+            <div>
+              <h3>Surface temperature:</h3>
+              <span>-179°C</span>
+            </div>
+            <div>
+              <h3>Number of moons:</h3>
+              <span>82, including Titan and Rhea</span>
+            </div>
+            <div>
+              <h3>Number of rings:</h3>
+              <span>from 3 to 30, their complexity making it hard to count</span>
+            </div>
+         </div>
+        </article>
+        <article id='jupiter'>
+          <div class='container'>
+            <h2>Jupiter</h2>
+            <p>Jupiter is the oldest planet of the solar system, as it was the first to take shape out of the remains of the former solar nebula. It is also, by far, the biggest: its mass is twice as big as all the other planets combined.</p>
+            <div>
+              <h3>First telescope observation:</h3>
+              <span>1610, by Galileo</span>
+            </div>
+            <div>
+              <h3>Distance from the sun:</h3>
+              <span>779 million km</span>
+            </div>
+            <div>
+              <h3>Mass:</h3>
+              <span>318 earth</span>
+            </div>
+            <div>
+              <h3>Radius:</h3>
+              <span>69,911 km</span>
+            </div>
+            <div>
+              <h3>Orbital period:</h3>
+              <span>11.86 years</span>
+            </div>
+            <div>
+              <h3>Rotation period:</h3>
+              <span>10 hours</span>
+            </div>
+            <div>
+              <h3>Surface temperature:</h3>
+              <span>-108°C</span>
+            </div>
+            <div>
+              <h3>Number of moons:</h3>
+              <span>67, including Io and Europa</span>
+            </div>
+            <div>
+              <h3>Number of rings:</h3>
+              <span>4</span>
+            </div>
+          </div>
+        </article>
+        <article id='mars'>
+          <div class='container'>
+            <h2>Mars</h2>
+            <p>Mars's famous red color is caused by the presence of iron oxide on its surface. This planet has the tallest mountain of the Solar System: named Olympus Mons, it is 21km high. Like Earth, Mars has seasons, although their length may vary because of the planet's egg-shaped orbit.</p>
+            <div>
+              <h3>First discovery:</h3>
+              <span>over 4,000 years ago</span>
+            </div>
+            <div>
+              <h3>Distance from the sun:</h3>
+              <span>227,9 million km</span>
+            </div>
+            <div>
+              <h3>Mass:</h3>
+              <span>0.1 earth</span>
+            </div>
+            <div>
+              <h3>Radius:</h3>
+              <span>3,389 km</span>
+            </div>
+            <div>
+              <h3>Orbital period:</h3>
+              <span>669.6 days</span>
+            </div>
+            <div>
+              <h3>Rotation period:</h3>
+              <span>24.6 hours</span>
+            </div>
+            <div>
+              <h3>Surface temperature:</h3>
+              <span>from -87 to -5°C</span>
+            </div>
+            <div>
+              <h3>Number of moons:</h3>
+              <span>2, Phobos and Deimos</span>
+            </div>
+            <div>
+              <h3>Number of rings:</h3>
+              <span>0</span>
+            </div>
+          </div>
+        </article>
+        <article id='earth'>
+          <div class='container'>
+            <h2>Earth</h2>
+            <p>Earth is estimated to be approximately 4.54 billion years old. Its surface is mostly covered with oceans of liquid water. Its ideal distance from the Sun makes it the only planet of the Solar System where it is possible to have water in that state. So far, it is the only known location in the universe that hosts life.</p>
+            <div>
+              <h3>Distance from the sun:</h3>
+              <span>147 million km</span>
+            </div>
+            <div>
+              <h3>Mass:</h3>
+              <span>6.6 sextillion tons</span>
+            </div>
+            <div>
+              <h3>Radius:</h3>
+              <span>6,356 km</span>
+            </div>
+            <div>
+              <h3>Orbital period:</h3>
+              <span>365.26 days</span>
+            </div>
+            <div>
+              <h3>Rotation period:</h3>
+              <span>24 hours</span>
+            </div>
+            <div>
+              <h3>Average temperature:</h3>
+              <span>16°C</span>
+            </div>
+            <div>
+              <h3>Number of moons:</h3>
+              <span>1</span>
+            </div>
+            <div>
+              <h3>Number of rings:</h3>
+              <span>0</span>
+            </div>
+          </div>
+        </article>
+        <article id='venus'>
+          <div class='container'>
+            <h2>Venus</h2>
+            <p>Although it is only the second closest to the Sun, Venus is the hottest planet of the Solar System. This planet has a very slow rotation, which technically makes venusian days longer than venusian years</p>
+            <div>
+              <h3>First discovery:</h3>
+              <span>14th century BC</span>
+            </div>
+            <div>
+              <h3>Distance from the sun:</h3>
+              <span>108.2 million km</span>
+            </div>
+            <div>
+              <h3>Mass:</h3>
+              <span>0.85 earth</span>
+            </div>
+            <div>
+              <h3>Radius:</h3>
+              <span>6,051 km</span>
+            </div>
+            <div>
+              <h3>Orbital period:</h3>
+              <span>224.7 days</span>
+            </div>
+            <div>
+              <h3>Rotation period:</h3>
+              <span>243 days</span>
+            </div>
+            <div>
+              <h3>Surface temperature:</h3>
+              <span>462°C</span>
+            </div>
+            <div>
+              <h3>Number of moons:</h3>
+              <span>0</span>
+            </div>
+            <div>
+              <h3>Number of rings:</h3>
+              <span>0</span>
+            </div>
+          </div>
+        </article>
+        <article id='mercury'>
+         <div class='container'>
+            <h2>Mercury</h2>
+            <p>Mercury is the fastest, smallest, but surprisingly not the hottest planet of the Solar System. Despite being the closest from the Sun, its lack of atmosphere makes it impossible to retain the heat. From day to night, its temperatures can vary from one extreme to another.</p>
+            <div>
+              <h3>First discovery:</h3>
+              <span>ancient times</span>
+            </div>
+            <div>
+              <h3>Distance from the sun:</h3>
+              <span>57.91 million km</span>
+            </div>
+            <div>
+              <h3>Mass:</h3>
+              <span>0.05 earth</span>
+            </div>
+            <div>
+              <h3>Radius:</h3>
+              <span>2,439 km</span>
+            </div>
+            <div>
+              <h3>Orbital period:</h3>
+              <span>88 days</span>
+            </div>
+            <div>
+              <h3>Rotation period:</h3>
+              <span>59 days</span>
+            </div>
+            <div>
+              <h3>Surface temperature:</h3>
+              <span>from -180 to +430 °C</span>
+            </div>
+            <div>
+              <h3>Number of moons:</h3>
+              <span>0</span>
+            </div>
+            <div>
+              <h3>Number of rings:</h3>
+              <span>0</span>
+            </div>
+         </div>
+        </article>
+      </section>
+      <nav class="controls">
+        <button id="previous" data-value='previous'>
+          <img src="src/icons/prev.png" alt="">
+        </button>
+          <ul class='bullets'>
+            <li data-value='neptune' class='neptune'>
+              <img src="src/icons/neptune.svg" alt="">
+              <span>Neptune</span>
+            </li>
+            <li data-value='uranus' class='uranus'>
+              <img src="src/icons/uranus.svg" alt="">
+              <span>Uranus</span>
+            </li>
+            <li data-value='saturn' class='saturn'>
+              <img src="src/icons/saturn.svg" alt="">
+              <span>Saturn</span>
+            </li>
+            <li data-value='jupiter' class='jupiter'>
+              <img src="src/icons/jupiter.svg" alt="">
+              <span>Jupiter</span>
+            </li>
+            <li data-value='mars' class='mars'>
+              <img src="src/icons/mars.svg" alt="">
+              <span>Mars</span>
+            </li>
+            <li data-value='earth' class='earth'>
+              <img src="src/icons/earth.svg" alt="">
+              <span>Earth</span>
+            </li>
+            <li data-value='venus' class='venus'>
+              <img src="src/icons/venus.svg" alt="">
+              <span>Venus</span>
+            </li>
+            <li data-value='mercury' class='mercury'>
+              <img src="src/icons/mercury.svg" alt="">
+              <span>Mercury</span>
+            </li>
+          </ul>
+        <button id="next" data-value='next'>
+          <img src="src/icons/next.png" alt="">
+        </button>
+      </nav>
+    </div>
+    <section id='about' class='contrast'>
+      <div class="about-nav">
+        <h2>About</h2>
+        <span id='closeAboutButton'>X</span>
+      </div>
+      <h3>Scientific soundness</h3>
+      <p>The aim of this project is to provide elegant information about the Solar System. However, given how huge and complex it is, the 3D modelling could not be scientifically correct. For the sake of simplicity and esthetism, the relative sizes of the planets and sun have been reduced, the orbits are simplified, the distances between the planets are shortened, and their movements are faster. The majority of the planets' textures are inspired from real footage, but Neptune and Uranus are artistic views.</p>
+      <h3>Credits</h3>
+      <p>Planets texture maps taken from planetpixelemporium.com</p>
+      <p>Planets pictogrammes taken from frontendmentor.io</p>
+      <p>Written content mostly inspired by nineplanets.org</p>
+      <p>Music track: 'Universe' by Serge Pavkin</p>
+      <span>&copy; Léa Marie 2021</span>
+    </section>
+    <script type="module" src="script/main.js"></script>
+  </body>
+</html>
