@@ -36,8 +36,6 @@ canvas {
   left : 0;
 }
 
-/* Loading screen */
-
 #loading {
   display:none;
   position: fixed;
@@ -80,8 +78,6 @@ canvas {
 .rocket-container > img {
   height: 15%;
 }
-
-/* Home Screen */
 
 #home {
   display: none;
@@ -129,8 +125,6 @@ canvas {
   transform: scale(1.02);
 }
 
-/* Tour */
-
 #tour {
   display: none;
   position: absolute;
@@ -163,11 +157,11 @@ canvas {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  -ms-overflow-style: none;  /* IE and Edge */
+  -ms-overflow-style: none; 
   scrollbar-width: none
 }
 
-.planets article .container::-webkit-scrollbar{ /*Chrome*/
+.planets article .container::-webkit-scrollbar{
   display: none;
 }
 
@@ -207,8 +201,6 @@ canvas {
   font-size: 0.9rem;
 }
 
-/* Top nav */
-
 .top-nav {
   position: fixed;
   top: 0;
@@ -246,8 +238,6 @@ canvas {
 #contrast {
   width: 108px;
 }
-
-/* Bottom Nav */
 
 .controls {
   display: flex;
@@ -322,8 +312,6 @@ canvas {
   display: block;
 }
 
-/* ABOUT PAGE */
-
 #about {
   display: none;
   flex-direction: column;
@@ -380,8 +368,6 @@ canvas {
   text-transform: uppercase;
 }
 
-/* TOGGLE CLASSES */
-
 .visible {
   display: flex!important;
 }
@@ -403,8 +389,6 @@ canvas {
 .contrast {
   background-color: rgba(0,0,0,0.4);
 }
-
-/* ANIMATIONS */
 
 @keyframes fadeIn {
   from {
@@ -433,9 +417,6 @@ canvas {
     transform: translate(-50%, -50%) rotate(1.12turn)
   }
 }
-
-
-/* RESPONSIVE */
 
 @media screen and (max-width: 830px) {
 
@@ -480,7 +461,25 @@ canvas {
   }
 }
 
-/* Forcing landscape mode on mobile devices */
+@media screen and (max-width: 576px){
+
+  #home h1 {
+    font-size: 0.8rem;
+    line-height: 100%;
+    margin-bottom: 20px;
+  }
+  
+  #home h2 {
+    font-size: 5rem;
+    letter-spacing: 10px;
+    line-height: 120%;
+    font-weight: 300;
+  }
+
+  #home button {
+    margin-top: 20px;
+  }
+}
 
 @media only screen and (orientation:portrait){
   #warning 

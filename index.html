@@ -2,22 +2,22 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image" href="src/favicon.png" />
+    <link rel="icon" type="image" href="/public/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Journey to Space</title>
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="/style/style.css">
   </head>
   <body>
     <div id="warning">
-      <img src="src/icons/rotate-device.gif" alt="">
+      <img src="/public/icons/rotate-device.gif" alt="">
       <p>For a better experience, please hold your device in landscape mode</p>
     </div>
     <div id="loading" class='visible'>
     <div id="app"></div>
       <div class='loading-animation'>
-        <img src="src/icons/mars.svg" alt="">
+        <img src="/public/icons/mars.svg" alt="">
         <div class='rocket-container'>
-            <img src="src/icons/rocket.png" alt="">
+            <img src="/public/icons/rocket.png" alt="">
         </div>
       </div>
     </div>
@@ -30,19 +30,19 @@
     <div id='tour'>
       <nav class='top-nav'>
         <button id="backHome"> 
-          <img src="src/icons/rocket.png" alt="home">
+          <img src="/public/icons/rocket.png" alt="home">
           <span>Fly back home</span>
         </button>
         <button id="openAbout"> 
-          <img src="src/icons/about.png" alt="about">
+          <img src="/public/icons/about.png" alt="about">
           <span>About</span>
         </button>
         <button id='contrast'>
-          <img src="src/icons/contrastoff.png" alt="toggle contrast">
+          <img src="/public/icons/contrastoff.png" alt="toggle contrast">
           <span>Contrast off</span>
         </button>
         <button id='music'>
-          <img src="src/icons/soundon.png" alt="sound control">
+          <img src="/public/icons/soundon.png" alt="sound control">
           <span>Music on</span>
         </button>
       </nav>
@@ -382,44 +382,44 @@
       </section>
       <nav class="controls">
         <button id="previous" data-value='previous'>
-          <img src="src/icons/prev.png" alt="">
+          <img src="/public/icons/prev.png" alt="">
         </button>
           <ul class='bullets'>
             <li data-value='neptune' class='neptune'>
-              <img src="src/icons/neptune.svg" alt="">
+              <img src="/public/icons/neptune.svg" alt="">
               <span>Neptune</span>
             </li>
             <li data-value='uranus' class='uranus'>
-              <img src="src/icons/uranus.svg" alt="">
+              <img src="/public/icons/uranus.svg" alt="">
               <span>Uranus</span>
             </li>
             <li data-value='saturn' class='saturn'>
-              <img src="src/icons/saturn.svg" alt="">
+              <img src="/public/icons/saturn.svg" alt="">
               <span>Saturn</span>
             </li>
             <li data-value='jupiter' class='jupiter'>
-              <img src="src/icons/jupiter.svg" alt="">
+              <img src="/public/icons/jupiter.svg" alt="">
               <span>Jupiter</span>
             </li>
             <li data-value='mars' class='mars'>
-              <img src="src/icons/mars.svg" alt="">
+              <img src="/public/icons/mars.svg" alt="">
               <span>Mars</span>
             </li>
             <li data-value='earth' class='earth'>
-              <img src="src/icons/earth.svg" alt="">
+              <img src="/public/icons/earth.svg" alt="">
               <span>Earth</span>
             </li>
             <li data-value='venus' class='venus'>
-              <img src="src/icons/venus.svg" alt="">
+              <img src="/public/icons/venus.svg" alt="">
               <span>Venus</span>
             </li>
             <li data-value='mercury' class='mercury'>
-              <img src="src/icons/mercury.svg" alt="">
+              <img src="/public/icons/mercury.svg" alt="">
               <span>Mercury</span>
             </li>
           </ul>
         <button id="next" data-value='next'>
-          <img src="src/icons/next.png" alt="">
+          <img src="/public/icons/next.png" alt="">
         </button>
       </nav>
     </div>
@@ -437,6 +437,6 @@
       <p>Music track: 'Universe' by Serge Pavkin</p>
       <span>&copy; Léa Marie 2021</span>
     </section>
-    <script type="module" src="script/main.js"></script>
+    <script type="module" src="/script/app.js"></script>
   </body>
 </html>

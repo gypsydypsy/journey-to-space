@@ -5,7 +5,8 @@ import { fadeIn, fadeOut } from './utils.js'
 import { toggleMusic, musicBtn, SFXElements, playClickSFX, playHoverSFX } from './music.js'
 import { load } from './loader.js'
 import { attachTransformControls, disableOrbitControls } from './controls.js'
-
+import contrastOn from '../public/icons/contraston.png'
+import contrastOff from '../public/icons/contrastoff.png'
 
 // Dom Elements
 const startBtn      = document.getElementById('start');
@@ -132,7 +133,7 @@ function toggleContrast () {
   const articles = document.querySelector('.planets').children;
 
   if(contrast){
-    constrastIcon.src = 'src/icons/contrastoff.png';
+    constrastIcon.src = contrastOff;
     contrastText.textContent = 'Contrast off';
 
     for (let article of articles){
@@ -142,7 +143,7 @@ function toggleContrast () {
     contrast = false;
   }
   else {
-    constrastIcon.src = 'src/icons/contraston.png';
+    constrastIcon.src = contrastOn;
     contrastText.textContent = 'Contrast on';
 
     for (let article of articles){

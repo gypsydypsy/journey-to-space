@@ -2,7 +2,8 @@ import * as THREE from 'three';
 import { planets } from './scene.js'
 
 function getTexture(planetName, type = 'map'){
-    return new THREE.TextureLoader().load(`src/textures/${planetName}${type}.jpg`);
+    const path = new URL(`/public/textures/${planetName}${type}.jpg`, import.meta.url).href
+    return new THREE.TextureLoader().load(path);
 }
   
 function createStar(array) {
